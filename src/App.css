@@ -9,8 +9,11 @@ html,body{
 }
 /* Navbar */
 .nav-container{
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100vw;
-  height: 130px;
+  height: 60px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -112,7 +115,7 @@ html,body{
   width: 400px;
   height: 100vh;
   background-color: rgba(255, 245, 0, 0.5);
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   transition: right ease .6s;
@@ -134,7 +137,163 @@ html,body{
   align-self: center;
   cursor: none !important;
 }
+.HBC{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hbb{
+  /* height: 100%; */
+  width: 80%;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+.hbb1{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  gap: 60px;
+.hbody{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-left: 30px;
+  h3{
+    display: flex;
+    flex-direction: column;
+    span{
+      font-weight: 300;
+    }
+  }
+  h1{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    span:nth-child(1){
+      font-weight: 500;
+    }
+    span:nth-child(3){
+      margin-left: -3px;
+      margin-bottom: 6px;
+    }
+    span:nth-child(2){
+      color: rgb(115,115,115);
+      border-bottom: 3px solid black;
+    }
+  }
+  button{
+    color: white;
+    background-image: linear-gradient(to right,rgb(50,246,246),rgb(166,167,159));
+    border: 0;
+    width: 105px;
+    height: 37px;
+    font-size: larger;
+    font-weight: 600;
+    border-radius: 60px 60px 60px 0px;
+    cursor: pointer;
+  }
+}
+}
+.hbbutton{
+  display: flex;
+  gap: 20px;
+  margin-left: 30px;
+  button{
+    border: 2px solid white;
+    width: 100px;
+    border-radius: 4px;
+    height: 30px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  button:nth-child(2){
+    background-image: linear-gradient(to right,rgb(67,67,67),rgb(0,0,0));
+  }
+  button:nth-child(1){
+    background-image: linear-gradient(to right,rgb(223,88,12),rgb(253,153,61));
+  }
+}
+.img{
+  width: 50%;
+  display: flex;
+justify-content: end;
+  img{
+    
+   width: 80%;
+   height: 100%;
+  }
+ }
+ .ig{
+  border: 2px solid black;
+  border-radius: 50%;
+  padding: 5px;
+ }
+ .social{
+  position: fixed;
+  left: 55px;
+  bottom: 35px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  img{
+    width: 25px;
+  }
+ }
+ .mail{
+  position: fixed;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  right: -10px;
+  bottom: 100px;
+  transform: rotate(270deg);
+  p{
+    font-size: 10px;
+  }
+  p:nth-child(1){
+    width: 4px;
+    height: 20px;
+    background-color: black;
+  }
+ }
 @media screen and (max-width: 853px) {
+  .mail{
+    right: -50px;
+  }
+ .social{
+  left: 30px;
+ }
+  .hbb{
+    flex-direction: column-reverse;
+    width: 80%;
+  }
+ .hbb1{
+  width: 100%;
+  .hbody{
+    button{
+      height: 30px;
+      width: 90px;
+      font-size: medium;
+
+    }
+  }
+ }
+    .hbbutton{
+      justify-content: space-evenly;
+    } 
+  .img{
+    width: 100%;
+    justify-content: center;
+    img{
+      width: 250px;
+    }
+  }
   .nav-body{
     width: 94%;
   }
@@ -171,12 +330,31 @@ html,body{
       height: 27px;
     }
   }
+  .sidebar{
+    display: flex;
+  }
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 550px) {
   .sidebar{
     width: 100vw;
   }
   .sidebar-op{
     align-items: center;
+  }
+  .social{
+    left: 10px;
+    img{
+      width: 17px;
+    }
+  }
+  .ig{
+    padding: 1px;
+    border: 1px solid black;
+  }
+  .hbody{
+    margin-left: 20px !important;
+  }
+  .mail{
+    right: -65px;
   }
 }
