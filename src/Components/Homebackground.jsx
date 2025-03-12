@@ -9,6 +9,13 @@ import s4 from "../../public/twb.png"
 import s5 from "../../public/tb.png"
 import s6 from "../../public/fb.png"
 import s7 from "../../public/gb.png"
+import t from "../../public/kw.png"
+import t1 from "../../public/liw.png"
+import t2 from "../../public/iw.png"
+import t3 from "../../public/tw.png"
+import t4 from "../../public/tww.png"
+import t5 from "../../public/fw.png"
+import t6 from "../../public/gw.png"
 
 const Homebackground = () => {
     const {Suns}=useContext(Contextprovider)
@@ -16,16 +23,16 @@ const Homebackground = () => {
   return (
     <div className='HBC'>
         <div className='social'>
-                 <img src={`${s6}`} alt="logo" />
-                 <img className='ig' src={`${s}`} alt="logo" />
-                 <img src={`${s4}`} alt="logo" />
-                 <img src={`${s7}`} alt="logo" />
-                 <img src={`${s3}`} alt="logo" />
-                 <img src={`${s5}`} alt="logo" />
-                 <img src={`${s2}`} alt="logo" />
+                 <img src={`${Sun=="moon"?s6:t5}`} alt="logo" />
+                 <img className={`${Sun=="moon"&&"ig"}`} src={`${Sun=="moon"?s:t2}`} style={{border:Sun=="sun"?"0":"2px solid black"}} alt="logo" />
+                 <img src={`${Sun=="moon"?s4:t4}`} alt="logo" />
+                 <img src={`${Sun=="moon"?s7:t6}`} alt="logo" />
+                 <img src={`${Sun=="moon"?s3:t1}`} alt="logo" />
+                 <img src={`${Sun=="moon"?s5:t3}`} alt="logo" />
+                 <img className={`${Sun=="sun"&&"ig"}`} src={`${Sun=="moon"?s2:t}`} style={{border:Sun=="sun"?"2px solid white":"0"}}  alt="logo" />
         </div>
         <div className='mail'>
-                 <p></p>
+                 <p style={{backgroundColor:Sun=="sun"?"white":"black"}}></p>
                  <p>sinhaanishkumar@outlook.com</p>
         </div>
         <div className='hbb'>

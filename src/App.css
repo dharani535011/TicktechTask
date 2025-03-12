@@ -17,6 +17,7 @@ html,body{
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 9999;
 }
 .nav-body{
   display: flex;
@@ -233,16 +234,20 @@ justify-content: end;
   border: 2px solid black;
   border-radius: 50%;
   padding: 5px;
+  width: 25px !important;
+  height: 25px !important;
  }
  .social{
   position: fixed;
   left: 55px;
   bottom: 35px;
+  z-index: 9999;
   display: flex;
   flex-direction: column;
   gap: 12px;
   img{
     width: 25px;
+    cursor: pointer;
   }
  }
  .mail{
@@ -252,6 +257,7 @@ justify-content: end;
   align-items: center;
   right: -10px;
   bottom: 100px;
+  z-index: 9999;
   transform: rotate(270deg);
   p{
     font-size: 10px;
@@ -262,7 +268,122 @@ justify-content: end;
     background-color: black;
   }
  }
+.about{
+  width: 100vw;
+  /* overflow-y: hidden; */
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 100px;
+  position: relative;
+  z-index: 999;
+}
+.ex{
+  width: 60vw;
+  height: 100px;
+}
+.aboutbody{
+  /* height: 100%; */
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  margin-left: 100px;
+  margin-bottom: 150px;
+  gap: 30px;
+}
+.headl{
+  display: flex;
+  align-items: last baseline;
+  width: 100%;
+  /* position: absolute; */
+  /* justify-content: space-evenly; */
+  h1{
+    /* width: 30%; */
+    display: flex;
+    flex-wrap: nowrap;
+    font-weight: 500;
+    .p{
+      font-weight: bold;
+      margin-right: 3px;
+    }
+  }
+}
+.tl{
+  width: 60%;
+  height: .5px;
+  background-color: rgba(0,0,0,.6);
+  margin-left: 10%;
+}
+.bl{
+  width: 30%;
+  height: .5px;
+  background-color: rgba(0,0,0,.6);
+  margin-top: 30px;
+  align-self: center;
+  
+}
+.para{
+  
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.b1,.b2,.b3,.b4,.hand{
+  position: absolute;
+  width: 250px;
+  z-index: -999;
+}
+.b1{
+    right: 0;
+    top: -16px;
+}
+.b2{
+  left: -24px;
+  top: -15px;
+}
+.b3{
+  right: 150px;
+  bottom: -50px;
+}
+.b4{
+  bottom: -50px;
+  left: 150px;
+}
+.hand{
+  left: 0;
+  top: -20px;
+}
 @media screen and (max-width: 853px) {
+  .b4{
+    left: 100px;
+  }
+  .b3{
+    right: 100px;
+  }
+  .hand{
+    display: none;
+  }
+  .b1,.b2,.b3,.b4,.hand{
+    width: 170px;
+  }
+  .tl{
+    width: 40%;
+  }
+  .para{
+    p{
+     font-size: 13px;
+    }
+  }
+  .aboutbody{
+    margin-left: 0px;
+    width: 80%;
+  }
+  .headl{
+    h1{
+      font-size: 20px;
+    }
+  }
   .mail{
     right: -50px;
   }
@@ -286,6 +407,7 @@ justify-content: end;
  }
     .hbbutton{
       justify-content: space-evenly;
+      margin-left: 20px;
     } 
   .img{
     width: 100%;
@@ -335,6 +457,9 @@ justify-content: end;
   }
 }
 @media screen and (max-width: 550px) {
+  .headl{
+    margin-top: 130px;
+  }
   .sidebar{
     width: 100vw;
   }
@@ -344,7 +469,8 @@ justify-content: end;
   .social{
     left: 10px;
     img{
-      width: 17px;
+      width: 17px !important;
+      height: 17px !important;
     }
   }
   .ig{
@@ -356,5 +482,14 @@ justify-content: end;
   }
   .mail{
     right: -65px;
+  }
+  .b1,.b2,.b3,.b4,.hand{
+    width: 130px;
+  }
+  .b3{
+    right: 30px;
+  }
+  .b4{
+    left: 30px;
   }
 }
