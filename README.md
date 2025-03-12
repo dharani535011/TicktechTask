@@ -15,4 +15,4 @@
 - After finishing the homebackground the i created the about page adding detials and styles using media query and some images
 - Finally check any mistakes are occurs in the app then add it to the git repo and deploy by using netlify web and hosted.
 
-[Ticktech Task](https://ticktechtask.netlify.app/)
+[Ticktech Task Url](https://ticktechtask.netlify.app/)
